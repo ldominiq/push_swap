@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:39:04 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/21 22:15:44 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/02/22 13:56:30 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,23 @@ void	rrr(t_stack *a, t_stack *b);
 
 void	move_up(t_stack *stack);
 void	move_down(t_stack *stack);
+
+// free
+
+void	free_all(t_stack *a, t_stack *b);
+
+// visuals
+
+void	show_stacks(t_stack *a, t_stack *b);
+
+// stack handler
+
+t_stack	*create_stack(void);
+int		*fill_stack(char **values, int nb);
+
+// args handler
+
+int		is_args_valid(char **args, int count);
+int		is_args_sorted(t_stack *a);
 
 #endif

@@ -1,9 +1,13 @@
-SRCS 		= 	main.c \
+SRCS 		= 	./main.c \
 				./operations/swap.c \
 				./operations/push.c \
 				./operations/utils.c \
 				./operations/rotate.c \
-				./operations/reverse.c
+				./operations/reverse.c \
+				./free.c \
+				./visuals.c \
+				./stack_handler.c \
+				./args_handler.c
 
 SRC			= 	$(addprefix $(DIR), $(SRCS))
 
