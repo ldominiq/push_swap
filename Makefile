@@ -7,7 +7,8 @@ SRCS 		= 	./main.c \
 				./free.c \
 				./visuals.c \
 				./stack_handler.c \
-				./args_handler.c
+				./args_handler.c \
+				./algorithms/small_sort.c
 
 SRC			= 	$(addprefix $(DIR), $(SRCS))
 

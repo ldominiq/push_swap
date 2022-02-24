@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:38:33 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/22 13:58:14 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/02/23 13:56:21 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,8 @@
 void	push_swap(t_stack *a, t_stack *b)
 {
 	show_stacks(a, b);
-	sa(a, 1);
-	show_stacks(a, b);
-	pb(a, b);
-	pb(a, b);
-	pb(a, b);
-	show_stacks(a, b);
-	rr(a, b);
-	show_stacks(a, b);
-	rrr(a, b);
-	show_stacks(a, b);
-	sa(a, 1);
-	show_stacks(a, b);
-	pa(a, b);
-	pa(a, b);
-	pa(a, b);
+	if (a->size <= 3)
+		small_sort(a, b);
 	show_stacks(a, b);
 }
 
