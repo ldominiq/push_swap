@@ -6,64 +6,57 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:12:16 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/24 01:22:09 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/02/28 13:37:37 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	get_min_pos(t_stack *stack)
-{
-	int	i;
-	int	pos;
-	int	min;
-
-	i = 0;
-	pos = 0;
-	min = stack->list[0];
-	while (i < stack->size)
-	{
-		if (min > stack->list[i])
-		{
-			pos = i;
-			min = stack->list[i];
-		}
-		i++;
-	}
-	return (pos);
-}
-
-int	get_max_pos(t_stack *stack)
-{
-	int	i;
-	int pos;
-	int	max;
-
-	i = 0;
-	pos = 0;
-	max = stack->list[0];
-	while (i < stack->size)
-	{
-		if (max < stack->list[i])
-		{
-			pos = i;
-			max = stack->list[i];
-		}
-		i++;
-	}
-	return (pos);
-}
-
 void	top_min(t_stack *a, int max)
 {
-	
+	if (a->size == 3)
+	{
+		if (max == 1)
+		{
+			sa(a, 1);
+			ra(a, 1);
+		}
+	}
 }
 
-void	small_sort(t_stack *a, t_stack *b)
+void	mid_min(t_stack *a, int max)
+{
+	if (a->size == 3)
+	{
+		if (max == 2)
+			sa(a, 1);
+		else
+			ra(a, 1);
+	}
+	else
+		sa(a, 1);
+}
+
+void	bot_min(t_stack *a, int max)
+{
+	if (a->size == 3)
+	{
+		if (max == 0)
+			sa(a, 1);
+		rra(a, 1);
+	}
+}
+
+/**
+ * @brief Up to 3 numbers sorting algorithm
+ * 
+ * @param a 
+ * @param b 
+ */
+void	small_sort(t_stack *a)
 {
 	int	min;
 	int	max;
-	(void) b;
 
 	min = get_min_pos(a);
 	max = get_max_pos(a);
@@ -73,5 +66,4 @@ void	small_sort(t_stack *a, t_stack *b)
 		mid_min(a, max);
 	else if (min == 2)
 		bot_min(a, max);
-	//printf("min: %d | max: %d\n", min, max);
 }

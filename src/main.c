@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:38:33 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/23 13:56:21 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:02:46 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	push_swap(t_stack *a, t_stack *b)
 {
-	show_stacks(a, b);
+	//show_stacks(a, b);
 	if (a->size <= 3)
-		small_sort(a, b);
-	show_stacks(a, b);
+		small_sort(a);
+	else if (a->size <= 5)
+		medium_sort(a, b);
+	//show_stacks(a, b);
 }
 
 int	main(int argc, char *argv[])

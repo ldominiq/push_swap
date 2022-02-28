@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:39:04 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/23 13:31:22 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/02/28 13:37:42 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,12 @@ int		is_args_sorted(t_stack *a);
 
 // algorithms
 
-void	small_sort(t_stack *a, t_stack *b);
+void	small_sort(t_stack *a);
+void	medium_sort(t_stack *a, t_stack *b);
+
+// algorithms utils
+
+int		get_min_pos(t_stack *stack);
+int		get_max_pos(t_stack *stack);
 
 #endif
