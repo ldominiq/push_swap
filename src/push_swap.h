@@ -6,14 +6,14 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:39:04 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/28 13:37:42 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/01 10:26:17 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/libft.h" 
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {
@@ -76,5 +76,6 @@ void	medium_sort(t_stack *a, t_stack *b);
 
 int		get_min_pos(t_stack *stack);
 int		get_max_pos(t_stack *stack);
+void	simplify_stack(t_stack *a);
 
 #endif
