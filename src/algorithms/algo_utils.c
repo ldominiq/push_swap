@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:40:52 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/01 10:59:21 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/01 12:38:04 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,18 +127,19 @@ void	simplify_stack(t_stack *a)
 	int	j;
 
 	cpy = sort_stack(a);
-	i = -1;
-	while (++i < a->size)
-		printf("cpy[%d]: %d\n", i, cpy[i]);
-	i = -1;
-	while (++i < a->size)
+	i = 0;
+	while (i < a->size)
 	{
 		j = -1;
 		while (++j < a->size)
 		{
 			if (a->list[i] == cpy[j])
+			{
 				a->list[i] = j;
+				break ;
+			}
 		}
+		i++;
 	}
 	free(cpy);
 }

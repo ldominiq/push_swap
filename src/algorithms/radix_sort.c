@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 09:33:08 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/01 10:45:34 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/01 11:38:16 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	radix_sort(t_stack *a, t_stack *b)
 {
+	(void)b;
 	simplify_stack(a);
 }
