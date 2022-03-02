@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:39:04 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/02 13:32:13 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:17:08 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	rra(t_stack *a, int print);
 void	rrb(t_stack *b, int print);
 void	rrr(t_stack *a, t_stack *b);
 
-// utils
+// operations utils
 
 void	move_up(t_stack *stack);
 void	move_down(t_stack *stack);
@@ -63,13 +63,18 @@ void	show_stacks(t_stack *a, t_stack *b);
 // stack handler
 
 t_stack	*create_stack(void);
-int		*fill_stack(char **values, int nb);
+int		*fill_stack(char **values, int nb, int simu);
 
 // args handler
 
-int		is_args_valid(char **args, int count);
+int		is_args_valid(char **args, int count, int simu);
 int		is_args_sorted(t_stack *a);
 int		is_args_duplicate(t_stack *a);
+
+// utils
+
+void	single_arg(t_stack *a, t_stack *b, char *arg);
+void	multiple_args(t_stack *a, t_stack *b, int count, char **args);
 
 // algorithms
 

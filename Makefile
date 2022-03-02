@@ -12,6 +12,7 @@ SRCS 		= 	./main.c \
 				./algorithms/medium_sort.c \
 				./algorithms/algo_utils.c \
 				./algorithms/radix_sort.c \
+				./utils.c
 
 SRC			= 	$(addprefix $(DIR), $(SRCS))
 

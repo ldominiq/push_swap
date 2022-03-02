@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:38:33 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/02 12:38:30 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:15:23 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,14 @@ int	main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		is_args_valid(argv, argc - 1);
 		a = create_stack();
 		b = create_stack();
 		if (a == NULL || b == NULL)
 			return (1);
-		a->list = fill_stack(argv, argc - 1);
-		a->size = argc - 1;
-		b->list = (int *)malloc(sizeof(int) * argc - 1);
-		if (a->list == NULL || b->list == NULL)
-			return (1);
+		if (argc == 2)
+			single_arg(a, b, argv[1]);
+		if (argc >= 3)
+			multiple_args(a, b, argc, argv);
 		if (!is_args_duplicate(a))
 		{
 			if (!is_args_sorted(a))

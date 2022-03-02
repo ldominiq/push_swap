@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:50:56 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/02 14:06:57 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:14:22 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,20 +68,22 @@ void	check_args(char *arg)
  * @brief Check if args provided are valid (integers)
  * 
  * @param args
+ * @param count
+ * @param simu 1 if multiple args, 0 if single
  * @return int (1 if true | if false exit)
  */
-int	is_args_valid(char **args, int count)
+int	is_args_valid(char **args, int count, int simu)
 {
 	int			i;
 	long int	nb;
 
 	i = -1;
 	while (++i < count)
-		check_args(args[i + 1]);
+		check_args(args[i + simu]);
 	i = -1;
 	while (++i < count)
 	{
-		nb = ft_atol(args[i + 1]);
+		nb = ft_atol(args[i + simu]);
 		if (nb > MAX_INT || nb < MIN_INT)
 		{
 			ft_putendl_fd("Error", 1);
