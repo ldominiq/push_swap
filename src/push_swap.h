@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:39:04 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/02 12:21:52 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 13:32:13 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+
+# define MIN_INT -2147483648
+# define MAX_INT 2147483647
 
 typedef struct s_stack
 {
