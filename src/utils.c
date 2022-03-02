@@ -6,12 +6,19 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 15:16:00 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/02 15:17:02 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:23:00 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./push_swap.h"
 
+/**
+ * @brief Handle single arg input and fill stack with provided values
+ * 
+ * @param a 
+ * @param b 
+ * @param arg 
+ */
 void	single_arg(t_stack *a, t_stack *b, char *arg)
 {
 	char	**tmp;
@@ -37,6 +44,14 @@ void	single_arg(t_stack *a, t_stack *b, char *arg)
 	}
 }
 
+/**
+ * @brief Handle multiple arga input and fill stack with provided values
+ * 
+ * @param a 
+ * @param b 
+ * @param count 
+ * @param args 
+ */
 void	multiple_args(t_stack *a, t_stack *b, int count, char **args)
 {
 	is_args_valid(args, count - 1, 1);

@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:46:56 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/02 15:09:54 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 15:24:20 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ t_stack	*create_stack(void)
  * 
  * @param values args values
  * @param nb size of stack
- * @param simu
- * @return int* 
+ * @param simu 1 if multiple args, 0 if single
+ * @return int*
  */
 int	*fill_stack(char **values, int nb, int simu)
 {
