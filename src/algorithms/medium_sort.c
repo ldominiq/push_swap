@@ -6,12 +6,18 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:40:19 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/28 13:38:41 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:39:14 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+/**
+ * @brief Sorts up to 5 numbers
+ * 
+ * @param a 
+ * @param b 
+ */
 void	medium_sort(t_stack *a, t_stack *b)
 {
 	int	i;

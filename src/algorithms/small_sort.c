@@ -6,12 +6,18 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:12:16 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/28 13:37:37 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:19:08 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+/**
+ * @brief Used if the smallest number is at the top of the stack
+ * 
+ * @param a 
+ * @param max 
+ */
 void	top_min(t_stack *a, int max)
 {
 	if (a->size == 3)
@@ -24,6 +30,12 @@ void	top_min(t_stack *a, int max)
 	}
 }
 
+/**
+ * @brief Used if the smallest number is at the middle of the stack
+ * 
+ * @param a 
+ * @param max 
+ */
 void	mid_min(t_stack *a, int max)
 {
 	if (a->size == 3)
@@ -37,6 +49,12 @@ void	mid_min(t_stack *a, int max)
 		sa(a, 1);
 }
 
+/**
+ * @brief Used if the smallest number is at the bottom of the stack
+ * 
+ * @param a 
+ * @param max 
+ */
 void	bot_min(t_stack *a, int max)
 {
 	if (a->size == 3)

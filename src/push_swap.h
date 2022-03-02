@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:39:04 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/01 10:26:17 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:21:52 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,13 @@ int		*fill_stack(char **values, int nb);
 
 int		is_args_valid(char **args, int count);
 int		is_args_sorted(t_stack *a);
+int		is_args_duplicate(t_stack *a);
 
 // algorithms
 
 void	small_sort(t_stack *a);
 void	medium_sort(t_stack *a, t_stack *b);
+void	radix_sort(t_stack *a, t_stack *b, int size);
 
 // algorithms utils
 

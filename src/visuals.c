@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:40:40 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/01 12:38:36 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 11:39:35 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*convert_base_2(int n)
 	ans = malloc(sizeof(char) * 10);
 	while (i >= 0)
 	{
-		if ((n>>i)&1)
+		if ((n >> i) & 1)
 			ans[j] = '1';
 		else
 			ans[j] = '0';
@@ -49,15 +49,10 @@ void	show_stack_content(t_stack *stack)
 
 void	show_stacks(t_stack *a, t_stack *b)
 {
-	int	i;
-
-	i = -1;
-	printf("======================\n");
-	while (++i < a->size)
-		printf("%s ", convert_base_2(a->list[i]));
+	ft_putstr_fd("======================\n", 1);
 	ft_putstr_fd("A\033[0m | ", 1);
 	show_stack_content(a);
 	ft_putstr_fd("\n\033[1mB\033[0m | ", 1);
 	show_stack_content(b);
-	printf("\n======================\n");
+	ft_putstr_fd("\n======================\n", 1);
 }

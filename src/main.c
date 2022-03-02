@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:38:33 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/03/01 10:10:27 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:38:30 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	push_swap(t_stack *a, t_stack *b)
 {
-	show_stacks(a, b);
 	if (a->size <= 3)
 		small_sort(a);
 	else if (a->size <= 5)
 		medium_sort(a, b);
 	else
-		simplify_stack(a);
-	show_stacks(a, b);
+		radix_sort(a, b, a->size);
 }
 
 int	main(int argc, char *argv[])
@@ -41,8 +39,11 @@ int	main(int argc, char *argv[])
 		b->list = (int *)malloc(sizeof(int) * argc - 1);
 		if (a->list == NULL || b->list == NULL)
 			return (1);
-		if (!is_args_sorted(a))
-			push_swap(a, b);
+		if (!is_args_duplicate(a))
+		{
+			if (!is_args_sorted(a))
+				push_swap(a, b);
+		}
 		free_all(a, b);
 	}
 	return (0);

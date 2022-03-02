@@ -6,14 +6,41 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:50:56 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/22 13:56:23 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:30:19 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./push_swap.h"
 
 /**
- * @brief 
+ * @brief Check if duplicate values are in stack
+ * 
+ * @param a 
+ * @return int 
+ */
+int	is_args_duplicate(t_stack *a)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	while (++i < a->size)
+	{
+		j = i;
+		while (++j < a->size)
+		{
+			if (a->list[i] == a->list[j])
+			{
+				ft_putendl_fd("Error - there are duplicates", 1);
+				exit(EXIT_FAILURE);
+			}
+		}
+	}
+	return (0);
+}
+
+/**
+ * @brief Check if args provided are integers
  * 
  * @param arg 
  * @return int 
@@ -31,14 +58,14 @@ void	check_args(char *arg)
 			continue ;
 		else
 		{
-			ft_putendl_fd("Error", 1);
+			ft_putendl_fd("Error -  some arguments aren't integers", 1);
 			exit(EXIT_FAILURE);
 		}
 	}
 }
 
 /**
- * @brief Check if args provided are valid (integers)
+ * @brief Check if args provided are valid (integers / no duplicate)
  * 
  * @param args
  * @return int (1 if true | 0 if false and exit)
