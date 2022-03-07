@@ -28,7 +28,7 @@ GCC			= 	gcc
 
 RM 			= 	rm -f
 
-CFLAGS 		= 	-g -fsanitize=leak -Wall -Wextra -Werror
+CFLAGS 		= 	-g -fsanitize=address -Wall -Wextra -Werror
 
 LBFT_PATH	= 	./libft/
 

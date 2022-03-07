@@ -6,7 +6,7 @@
 /*   By: ldominiq <ldominiq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 21:38:43 by ldominiq          #+#    #+#             */
-/*   Updated: 2022/02/21 21:45:29 by ldominiq         ###   ########.fr       */
+/*   Updated: 2022/03/07 11:47:45 by ldominiq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	pa(t_stack *a, t_stack *b)
 		tmp = b->list[0];
 		move_up(b);
 		b->size--;
+		a->size++;
 		move_down(a);
 		a->list[0] = tmp;
-		a->size++;
 		ft_putendl_fd("pa", 1);
 	}
 }
@@ -39,9 +39,9 @@ void	pb(t_stack *a, t_stack *b)
 		tmp = a->list[0];
 		move_up(a);
 		a->size--;
+		b->size++;
 		move_down(b);
 		b->list[0] = tmp;
-		b->size++;
 		ft_putendl_fd("pb", 1);
 	}
 }
